@@ -24,5 +24,8 @@ public class Main {
      System.out.println(two);
      System.out.println();
 
+     // Planning plan = new Planning<>("I");
+     
+
     }
 }
