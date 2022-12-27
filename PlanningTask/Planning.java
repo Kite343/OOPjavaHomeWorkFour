@@ -1,7 +1,7 @@
 package PlanningTask;
 
 public abstract class Planning {
-    private String name;
+    protected String name;
     // в абстрактном классевозможны еще такие параметры как:
     // id, какие-то данные пользователя планировщика
 

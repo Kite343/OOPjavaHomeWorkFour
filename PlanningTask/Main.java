@@ -1,5 +1,6 @@
 package PlanningTask;
 
+import java.util.ArrayList;
 // import java.util.Date;
 // import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -24,7 +25,12 @@ public class Main {
      System.out.println(two);
      System.out.println();
 
-     // Planning plan = new Planning<>("I");
+     ArrayList<JobTask> t = new ArrayList<>();
+     t.add(one);
+     t.add(two);
+
+     JobPlanning plan = new JobPlanning("myTask");
+     plan.setTasks(t);
      
 
     }
