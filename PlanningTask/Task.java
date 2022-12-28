@@ -4,7 +4,7 @@ package PlanningTask;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-public abstract class Task {
+public abstract class Task  implements Comparable<Task>{
     protected int id;
     protected TaskPriority taskPriority;
     protected String name;
@@ -69,10 +69,10 @@ public abstract class Task {
 
     @Override
     public String toString() {
-        return id + "," +
-                taskPriority  + "," +
-                name + "," +
-                data(dataStart) + "," +
+        return id + ";" +
+                taskPriority  + ";" +
+                name + ";" +
+                data(dataStart) + ";" +
                 data(dataDeadline);
     }
 
@@ -81,5 +81,10 @@ public abstract class Task {
                 (data.get(Calendar.MONTH) + 1) + "/" + 
                 data.get(Calendar.DAY_OF_MONTH);
     }
-    
+
+    @Override
+    public int compareTo(Task o) {
+        return o.taskPriority.getCode() - this.taskPriority.getCode();
+    }
+   
 }

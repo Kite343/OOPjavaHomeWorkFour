@@ -25,8 +25,8 @@ public class JobTask extends Task{
 
     @Override
     public String toString() {
-        return super.toString()  + "," + taskManager.toString();
-    }    
+        return super.toString()  + ";" + taskManager.toString();
+    }      
 
     
 }
